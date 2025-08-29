@@ -48,9 +48,9 @@ app.post('/bfhl', (req, res) => {
 
     const responsePayload = {
       is_success: true,
-      user_id: "rudresh_pandey_01012000", // 👉 replace with your format
-      email: "your.email@example.com",   // 👉 replace with your email
-      roll_number: "XX-XX-XX-XXXX",      // 👉 replace with your roll number
+      user_id: "john_doe_17091999", 
+      email: "john@xyz.com", 
+      roll_number: "ABCD123",    
       odd_numbers: oddNumbers,
       even_numbers: evenNumbers,
       alphabets: alphabets,
@@ -68,13 +68,10 @@ app.post('/bfhl', (req, res) => {
   }
 });
 
-// ✅ Local server (not used by Vercel)
 if (require.main === module) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
     console.log(`Server is happily running on http://localhost:${PORT}`);
   });
 }
-
-// Export for Vercel
 module.exports = app;
